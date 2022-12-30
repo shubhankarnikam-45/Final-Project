@@ -10,6 +10,13 @@ body {
 	display: block;
 	width: 100%;
 }
+.section-1 ,.section-2{
+	border:1px solid black;
+}
+.section-2 .left-image{
+
+	border:1px solid black;
+}
 nav {
 	position: fixed;
 	z-index: 10;
