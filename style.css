@@ -1,0 +1,241 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+.container {
+	position: relative;
+	margin-top: 100px;
+}
+.container img {
+	display: block;
+	width: 100%;
+}
+nav {
+	position: fixed;
+	z-index: 10;
+	left: 0;
+	right: 0;
+	top: 0;
+	font-family: 'Montserrat', sans-serif;
+	padding: 0 5%;
+	height: 100px;
+	background-color:black;
+}
+nav .logo {
+	float: left;
+	width: 40%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	font-size: 24px;
+	color: #fff;
+}
+nav .links {
+	float: right;
+	padding: 0;
+	margin: 0;
+	width: 60%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+nav .links button {
+    padding:0;
+    border-radius:
+
+}
+nav .links a {
+	display: block;
+	padding: 1em;
+	font-size: 16px;
+	font-weight: bold;
+	color:black;
+	text-decoration: none;
+}
+#nav-toggle {
+	position: absolute;
+	top: -100px;
+}
+nav .icon-burger {
+	display: none;
+	position: absolute;
+	right: 5%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+nav .icon-burger .line {
+	width: 30px;
+	height: 5px;
+	background-color: #fff;
+	margin: 5px;
+	border-radius: 3px;
+	transition: all .3s ease-in-out;
+}
+@media screen and (max-width: 768px) {
+	nav .logo {
+		float: none;
+		width: auto;
+		justify-content: center;
+	}
+	nav .links {
+		float: none;
+		position: fixed;
+		z-index: 9;
+		left: 0;
+		right: 0;
+		top: 100px;
+		bottom: 100%;
+		width: auto;
+		height: auto;
+		flex-direction: column;
+		justify-content: space-evenly;
+		background-color: rgba(0,0,0,.8);
+		overflow: hidden;
+		box-sizing: border-box;
+		transition: all .5s ease-in-out;
+	}
+	nav .links a {
+		font-size: 20px;
+	}
+	nav :checked ~ .links {
+		bottom: 0;
+	}
+	nav .icon-burger {
+		display: block;
+	}
+	nav :checked ~ .icon-burger .line:nth-child(1) {
+		transform: translateY(10px) rotate(225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(3) {
+		transform: translateY(-10px) rotate(-225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(2) {
+		opacity: 0;
+	}
+	
+}
+/* 
+BUSSINESS LANDING PAGE */
+
+.bussiness-lp{
+    padding:34px 52px;
+    border:1 px solid red;
+
+    position: relative;
+    animation-name: demo;
+    animation-duration: 8s;
+    animation-iteration-count: 1;
+
+}
+
+.section-1{
+    padding:84px;
+}
+
+
+@keyframes demo {
+    0%{
+        top:0px;
+        left:0px;
+    }
+    25%{
+        top: 150px;
+        left: 0px;
+    }
+    75%{
+        top: 100px;
+        left: 150px;
+    }
+    100%{
+        top: 0px;
+        left: 150px;
+    }
+    
+}
+
+@media (max-width:768)
+{
+    .section2-child{
+        display:block;
+    }
+}
+.section-3 h1{
+    padding-top:20px;
+    text-align: center;
+}
+
+
+.wrapper{
+    max-height:150px;
+    border:1px solid black;
+    display:flex;
+    overflow-x:auto;
+}
+
+.wrapper::-webkit-scrollbar{
+    width:0;
+}
+.wrapper .items{
+    min-width:150px;
+    height:150px;
+    text-align:center;
+    background-color:white;
+    margin-right:2px;
+}
+.row2{
+	padding:20px;
+	text-align: center;
+}
+
+.wrapper .items:hover{
+	background-color: black;
+
+	
+}
+
+ .items p:hover {
+	transition-delay:0.3s;
+	color:white;
+}
+
+.section-4{
+	padding:50px; 
+}
+
+.pd{
+	text-align: center;
+	margin-left:500px;
+	color:white;
+}
+.form{
+    display:flex;
+    background-color: black;
+}
+.box{
+   align-items: center;
+}
+
+.message{
+    width: 100%;
+    position: relative;
+    margin-bottom: 60px;
+    display: flex;
+}
+.message .success{
+    font-size: 20px;
+    color: white;
+    display: none;
+}
+.message .danger{
+    font-size: 20px;
+    color: white;
+    display: none;
+}
+
+@media (max-width:768)
+{
+	body{
+		display:block;
+	}
+}
